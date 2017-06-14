@@ -1,165 +1,108 @@
-// var name = prompt("What's your name?")
-// document.write("hello " + name + ", nice to meet you!")
-
-
-
-// var name = prompt("What's your name?")
-
-// if (name == "Alice" || name == "Bob") {
-// 	document.write("Hello, " + name)
-// }  else {
-// 	document.write("Bye")
-// }
-
-
-
-// var content = "this is the element with something"
-// document.getElementById('test').innerHTML = content
-
-// login system!!!
-// var data = [
-//     {
-//      username:"abc",
-//      password:123
-//     },
-//     {
-//      username:"asd",
-//      password:234
-//     }
-// ]
-
-
-
-// function getInfo(){
-// 	var username = document.getElementById("username").value
-// 	var password = document.getElementById("password").value
-// 	for (var i = 0; i < data.length; i++) {
-// 		if (username == data[i].username && password == data[i].password){
-// 		console.log("loged in")
-// 	} else (
-// 		console.log("nooooo"))
-// 	}
-	 
-// }
-
-// document.getElementById("test").innerHTML = "this is something"
-
-// var x = "this is a string"
-// document.getElementById("test2").innerHTML = x
-
-
-// #3
-// function info(){
-// 	var info = document.getElementById("test3").value
-// 	console.log(info)
-// }
-
-// #4
-// var array5 = ["qwe", "rty", "uio", "pas", "dfg"]
-// for (var i = 0; i < array5.length; i++) {
-// 	console.log(array5[i])
-// }
-
-
-// #6
-// var object = [ 
-//    {
-// 	name: "abc",
-// 	age:12,
-//     color:"white"
-//    },
-//    {
-//    	name:"def",
-//    	age:34,
-//    	color:"black"
-//    },
-//    {
-//    	name:"tre",
-//    	age:3,
-//    	color:"red"
-//    },
-//    {
-//    	name:"cod",
-//    	age:95,
-//    	color:"none"
-//    },
-//    {
-//    	name:"yyy",
-//    	age:46,
-//    	color:"pink"
-//    }
-
-
-// ]
-
-// for (var i = 0; i < object.length; i++) {
-// 	console.log(object[i].name)
-// }
-
-
-// var cars = ["fiat", "benz", "honda", "toyota"]
-
-
-// for (var i = 0; i < cars.length; i++) {
-// 	console.log(i)
-// }
-
-// var arr = [10, 15, 35, 75, 58, 34]
-// var big = 0
-// for (var i = 0; i < arr.length; i++) {
-// 	if (big<arr[i]) {big = arr[i]}
-// }
-
-// console.log(big)
-
-// var honda = {
-// 	model:"civic",
-// 	year:2014,
-// 	color:"blue"
-// }
-
-// console.log(honda.year)
-
-
-
-
-var stars = [
-   {
-   	name:"leo",
-   	desc:"you are leo"
-   },
-   {
-   	name:"aries",
-   	desc:"you are aries"
-   },
-   {
-   	name:"cancer",
-   	desc:"you are cancer"
-   }
+var zodiac_group = [
+    {
+     name:"leo",
+     strength:"Creative, passionate, generous, warm-hearted, cheerful, humorous",
+     weakness:"Arrogant, stubborn, self-centered, lazy, inflexible",
+     img:"img/leo.jpg"
+    },
+    {
+     name:"cancer",
+     strength:"Tenacious, highly imaginative, loyal, emotional, sympathetic, persuasive",
+     weakness:"Moody, pessimistic, suspicious, manipulative, insecure",
+     img:"img/cancer.jpg"
+    },
+    {
+     name:"aquarius",
+     strength:"Progressive, original, independent, humanitarian",
+     weakness:"Runs from emotional expression, temperamental, uncompromising, aloof",
+     img:"img/aquarius.jpg"
+    },
+    {
+     name:"pisces",
+     strength:"Compassionate, artistic, intuitive, gentle, wise, musical",
+     weakness:"Fearful, overly trusting, sad, desire to escape reality, can be a victim or a martyr",
+     img:"img/pisces.jpg"
+    },
+    {
+     name:"aries",
+     strength:"Courageous, determined, confident, enthusiastic, optimistic, honest, passionate",
+     weakness:"Impatient, moody, short-tempered, impulsive, aggressive",
+     img:"img/aries.jpg"
+    },
+    {
+     name:"taurus",
+     strength:"Reliable, patient, practical, devoted, responsible, stable",
+     weakness:"Stubborn, possessive, uncompromising",
+     img:"img/taurus.jpg"
+    },
+    {
+     name:"gemini",
+     strength:"Gentle, affectionate, curious, adaptable, ability to learn quickly and exchange ideas",
+     weakness:"Nervous, inconsistent, indecisive",
+     img:"img/gemini.jpg"
+    },
+    {
+     name:"virgo",
+     strength:"Loyal, analytical, kind, hardworking, practical",
+     weakness:"Shyness, worry, overly critical of self and others, all work and no play",
+     img:"img/virgo.jpg"
+    },
+    {
+     name:"libra",
+     strength:"Cooperative,diplomatic, gracious, fair-minded, social",
+     weakness:"Indecisive, avoids confrontations, will carry a grudge, self-pity",
+     img:"img/libra.jpg"
+    },
+    {
+     name:"scorpio",
+     strength:"Resourceful, brave, passionate, stubborn, a true friend,handsome as fk",
+     weakness:"Distrusting, jealous, secretive, violent",
+     img:"img/scorpio.jpg"
+    },
+    {
+     name:"sagittarius",
+     strength:"Generous, idealistic, great sense of humor",
+     weakness:"Promises more than can deliver, very impatient, will say anything no matter how undiplomatic",
+     img:"img/sagittarius.jpg"
+    },
+    {
+     name:"capricorn",
+     strength:"Responsible, disciplined, self-control, good managers",
+     weakness:"Know-it-all, unforgiving, condescending, expecting the worst",
+     img:"img/capricorn.jpg"
+    }
+    // {
+    //  name:"",
+    //  strength:"",
+    //  weakness:""
+    // },
 ]
 
 
 function zo(){
-	var zodiac = document.getElementById("zodiac").value
-	var no = "noooooooooo"
+	var zodiac = document.getElementById('zodiac').value
+        zodiac = zodiac.toLowerCase()
+	var wrongname = "Please type in correct Zodiac name."
 
-	for (var i = 0; i < stars.length; i++) {
-		if (zodiac == stars[i].name) {
-			
-			document.getElementById("desc").innerHTML = stars[i].desc
+	 for (var i = 0; i < zodiac_group.length; i++) {
+	 	if (zodiac == zodiac_group[i].name) {
+            document.getElementById('zodiac_img').src=zodiac_group[i].img
+	 		document.getElementById('strength').innerHTML = "Your strength is: " + zodiac_group[i].strength
+	 		document.getElementById('weakness').innerHTML = "Your weakness is: " + zodiac_group[i].weakness	 	
+            return	
+	 	}
+            document.getElementById('zodiac_img').src=""
+            document.getElementById('strength').innerHTML = wrongname
+            document.getElementById('weakness').innerHTML = ""     
 
-		} 
-		else {
-			document.getElementById("desc").innerHTML = no
+
+	 }
 		}
+
+
+
+document.getElementById('zodiac').onkeypress=function(enter){
+    if(enter.keyCode==13){
+        document.getElementById('check').click();
+    }
 }
-}
-// function getInfo(){
-// 	var username = document.getElementById("username").value
-// 	var password = document.getElementById("password").value
-// 	for (var i = 0; i < data.length; i++) {
-// 		if (username == data[i].username && password == data[i].password){
-// 		console.log("loged in")
-// 	} else (
-// 		console.log("nooooo"))
-// 	}
