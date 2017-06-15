@@ -24,8 +24,21 @@ h1{
 #strength,
 #weakness{
 	font-size: 25px;
+	margin-bottom: 20px;
 }
 
 input::placeholder {
   color: black;
+}
+
+#check{
+	margin-top: 40px;
+	margin-bottom: 45px;
+	
+	line-height: 51px;
+	border-radius: 50%;
+}
+
+#zodiac_img{
+	margin-bottom: 20px;
 }

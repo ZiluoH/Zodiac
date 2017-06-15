@@ -87,8 +87,8 @@ function zo(){
 	 for (var i = 0; i < zodiac_group.length; i++) {
 	 	if (zodiac == zodiac_group[i].name) {
             document.getElementById('zodiac_img').src=zodiac_group[i].img
-	 		document.getElementById('strength').innerHTML = "Your strength is: " + zodiac_group[i].strength
-	 		document.getElementById('weakness').innerHTML = "Your weakness is: " + zodiac_group[i].weakness	 	
+	 		document.getElementById('strength').innerHTML = "Your strength : " + zodiac_group[i].strength
+	 		document.getElementById('weakness').innerHTML = "Your weakness : " + zodiac_group[i].weakness	 	
             return	
 	 	}
             document.getElementById('zodiac_img').src=""
